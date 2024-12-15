@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Бронювання турів</title>
+</head>
+<body>
+    <h1>Доступні тури</h1>
+    <ul>
+        {% for tour in tours %}
+            <li><strong>{{ tour.name }}</strong>: {{ tour.description }} - {{ tour.price }} грн</li>
+        {% endfor %}
+    </ul>
+    <p><a href="{{ url_for('add_tour') }}">Додати новий тур</a></p>
+</body>
+</html>
